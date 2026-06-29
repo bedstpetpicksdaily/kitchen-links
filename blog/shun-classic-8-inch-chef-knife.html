@@ -46,5 +46,44 @@ li{margin:.4em 0;font-size:.92em}
 <h2>Frequently Asked Questions</h2><div class="faq-section"><div class="faq-item"><h3>Is the Shun Classic knife worth the high price?</h3><p>Yes, for dedicated home cooks and professionals. The Damascus steel blade, exceptional sharpness, and durability provide long-term value that justifies the investment compared to cheaper alternatives that require frequent replacement.</p></div><div class="faq-item"><h3>Can I put the Shun Classic knife in the dishwasher?</h3><p>No, hand washing is required. Dishwasher use can damage the Damascus pattern, dull the blade, and potentially cause corrosion. Always wash by hand and dry immediately.</p></div><div class="faq-item"><h3>How often does the Shun Classic knife need sharpening?</h3><p>With proper care, the Shun Classic maintains its edge for months of regular use. However, it should be honed weekly with a honing steel and professionally sharpened annually or when needed.</p></div><div class="faq-item"><h3>What makes Japanese Damascus steel better than other blade materials?</h3><p>Japanese Damascus steel layers multiple steel types to combine hardness with flexibility. This results in superior edge retention, easier sharpening, and stunning visual appeal compared to single-steel blades.</p></div></div>
 <p class="disclosure">As an Amazon Associate we earn from qualifying purchases at no extra cost to you.</p>
 <a class="back" href="https://bestkitchenpicksdaily.com/">&larr; Back to Best Kitchen Picks Daily</a>
+<!-- benson-email-capture -->
+<div id="benson-popup" style="display:none;position:fixed;bottom:24px;right:24px;z-index:99999;
+  background:#fff;border-radius:18px;padding:24px;max-width:310px;width:92%;
+  box-shadow:0 12px 48px rgba(0,0,0,.2);border:1px solid #f0f0f0;font-family:system-ui,sans-serif">
+  <button onclick="bensonClose()"
+    style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.3em;cursor:pointer;color:#ccc;line-height:1">&times;</button>
+  <h3 style="margin:0 0 6px;font-size:1em;color:#111;line-height:1.3">Cook Better for Less</h3>
+  <p style="margin:0 0 14px;font-size:.83em;color:#666">The best kitchen gear deals, picked weekly.</p>
+  <form action="https://github.us22.list-manage.com/subscribe/post?u=265f3a9f135d549492bf9a270&id=b20f19d114" method="post" target="_blank"
+    style="margin:0" onsubmit="bensonOnSubmit()">
+    <input type="hidden" name="MMERGE1" value="kitchen">
+    <input type="hidden" name="b_265f3a9f135d549492bf9a270_b20f19d114" value="">
+    <input type="email" name="EMAIL" placeholder="your@email.com" required
+      style="width:100%;box-sizing:border-box;padding:11px 14px;border:1.5px solid #e0e0e0;
+      border-radius:10px;font-size:.9em;margin-bottom:8px;outline:none">
+    <button type="submit"
+      style="width:100%;background:#e63946;color:#fff;border:none;padding:12px;
+      border-radius:10px;font-weight:700;cursor:pointer;font-size:.95em">Get Free Picks &rarr;</button>
+  </form>
+  <p style="margin:10px 0 0;font-size:.7em;color:#ccc;text-align:center">No spam. Unsubscribe anytime.</p>
+</div>
+<script>
+(function(){
+  function bensonClose(){
+    document.getElementById('benson-popup').style.display='none';
+    sessionStorage.setItem('bpop','1');
+  }
+  window.bensonClose = bensonClose;
+  window.bensonOnSubmit = function(){
+    localStorage.setItem('bsub','1');
+    setTimeout(bensonClose, 500);
+  };
+  if (!localStorage.getItem('bsub') && !sessionStorage.getItem('bpop')) {
+    setTimeout(function(){
+      document.getElementById('benson-popup').style.display='block';
+    }, 20000);
+  }
+})();
+</script>
 </body>
 </html>
