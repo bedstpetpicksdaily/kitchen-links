@@ -201,5 +201,26 @@ li{margin:.4em 0;font-size:.92em}
   }
 })();
 </script>
+<!-- benson-affiliate-tracker -->
+<script>
+(function(){
+  var affiliateDomains = ['amazon.com','amzn.to','awin1.com','awinaffid','prf.hn','shareasale.com','impact.com','cj.com'];
+  function isAffiliate(href){
+    if(!href) return false;
+    return affiliateDomains.some(function(d){return href.indexOf(d)>-1;});
+  }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('a');
+    if(!el||!isAffiliate(el.href)) return;
+    if(typeof gtag==='function'){
+      gtag('event','affiliate_click',{
+        'link_url': el.href,
+        'link_text': (el.innerText||'').trim().substring(0,100),
+        'page_path': window.location.pathname
+      });
+    }
+  },true);
+})();
+</script>
 </body>
 </html>

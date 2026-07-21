@@ -55,6 +55,8 @@ li{margin:.4em 0;font-size:.92em}
   ]
 }
 </script>
+<!-- benson-breadcrumb -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Best Kitchen Picks Daily", "item": "https://bestkitchenpicksdaily.com/"}, {"@type": "ListItem", "position": 2, "name": "All Reviews", "item": "https://bestkitchenpicksdaily.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Anova Precision Cooker Nano vs Pro: Which WiFi Sous Vide Cooker Actually Wins in 2026?", "item": "https://bestkitchenpicksdaily.com/blog/anova-precision-cooker-nano-vs-pro-which-wifi-sous-vide-cooker-actually-wins-in-.html"}]}</script>
 </head>
 <body>
 <!-- benson-network-bar -->
@@ -191,6 +193,27 @@ li{margin:.4em 0;font-size:.92em}
       document.getElementById('benson-popup').style.display='block';
     }, 20000);
   }
+})();
+</script>
+<!-- benson-affiliate-tracker -->
+<script>
+(function(){
+  var affiliateDomains = ['amazon.com','amzn.to','awin1.com','awinaffid','prf.hn','shareasale.com','impact.com','cj.com'];
+  function isAffiliate(href){
+    if(!href) return false;
+    return affiliateDomains.some(function(d){return href.indexOf(d)>-1;});
+  }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('a');
+    if(!el||!isAffiliate(el.href)) return;
+    if(typeof gtag==='function'){
+      gtag('event','affiliate_click',{
+        'link_url': el.href,
+        'link_text': (el.innerText||'').trim().substring(0,100),
+        'page_path': window.location.pathname
+      });
+    }
+  },true);
 })();
 </script>
 </body>
